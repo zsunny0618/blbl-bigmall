@@ -5,11 +5,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    checked: {
+      isShow: false
+    },
+    age:18
   },
-  mutations: {
+  getters: {
+    checked(state) {
+      return JSON.parse(JSON.stringify(state.checked))
+    },
+    age(state){
+      return state.age
+    }
   },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {}
 })
